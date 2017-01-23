@@ -10,7 +10,8 @@
 		9A7B6E611E322622006F4A20 /* SwiftyOnce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7B6E571E322622006F4A20 /* SwiftyOnce.framework */; };
 		9A7B6E661E322622006F4A20 /* SwiftyOnceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7B6E651E322622006F4A20 /* SwiftyOnceTests.swift */; };
 		9A7B6E681E322622006F4A20 /* SwiftyOnce.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A7B6E5A1E322622006F4A20 /* SwiftyOnce.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9A7B6E731E3226C7006F4A20 /* DispatchQueue+Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7B6E721E3226C7006F4A20 /* DispatchQueue+Once.swift */; };
+		9AE4CDC91E35FC50009B0A42 /* SwiftyOnce.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9AE4CDC81E35FC50009B0A42 /* SwiftyOnce.podspec */; };
+		9AE4CDCB1E35FF8C009B0A42 /* DispatchQueue+Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4CDCA1E35FF8C009B0A42 /* DispatchQueue+Once.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +32,8 @@
 		9A7B6E651E322622006F4A20 /* SwiftyOnceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyOnceTests.swift; sourceTree = "<group>"; };
 		9A7B6E671E322622006F4A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A7B6E711E322655006F4A20 /* SwiftyOnce.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftyOnce.playground; sourceTree = "<group>"; };
-		9A7B6E721E3226C7006F4A20 /* DispatchQueue+Once.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Once.swift"; sourceTree = "<group>"; };
+		9AE4CDC81E35FC50009B0A42 /* SwiftyOnce.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftyOnce.podspec; sourceTree = "<group>"; };
+		9AE4CDCA1E35FF8C009B0A42 /* DispatchQueue+Once.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Once.swift"; path = "Sources/DispatchQueue+Once.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +58,9 @@
 		9A7B6E4D1E322622006F4A20 = {
 			isa = PBXGroup;
 			children = (
+				9AE4CDC81E35FC50009B0A42 /* SwiftyOnce.podspec */,
 				9A7B6E711E322655006F4A20 /* SwiftyOnce.playground */,
+				9AE4CDCC1E35FF91009B0A42 /* Sources */,
 				9A7B6E591E322622006F4A20 /* SwiftyOnce */,
 				9A7B6E641E322622006F4A20 /* SwiftyOnceTests */,
 				9A7B6E581E322622006F4A20 /* Products */,
@@ -75,7 +79,6 @@
 		9A7B6E591E322622006F4A20 /* SwiftyOnce */ = {
 			isa = PBXGroup;
 			children = (
-				9A7B6E721E3226C7006F4A20 /* DispatchQueue+Once.swift */,
 				9A7B6E5B1E322622006F4A20 /* Info.plist */,
 				9A7B6E5A1E322622006F4A20 /* SwiftyOnce.h */,
 			);
@@ -89,6 +92,14 @@
 				9A7B6E671E322622006F4A20 /* Info.plist */,
 			);
 			path = SwiftyOnceTests;
+			sourceTree = "<group>";
+		};
+		9AE4CDCC1E35FF91009B0A42 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9AE4CDCA1E35FF8C009B0A42 /* DispatchQueue+Once.swift */,
+			);
+			name = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE4CDC91E35FC50009B0A42 /* SwiftyOnce.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A7B6E731E3226C7006F4A20 /* DispatchQueue+Once.swift in Sources */,
+				9AE4CDCB1E35FF8C009B0A42 /* DispatchQueue+Once.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +418,7 @@
 				9A7B6E6D1E322622006F4A20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A7B6E6E1E322622006F4A20 /* Build configuration list for PBXNativeTarget "SwiftyOnceTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +427,7 @@
 				9A7B6E701E322622006F4A20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
