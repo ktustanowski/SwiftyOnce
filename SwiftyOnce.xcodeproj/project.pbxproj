@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A5E1D3F1E363F4A00EFF992 /* Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5E1D3E1E363F4A00EFF992 /* Once.swift */; };
 		9A7B6E611E322622006F4A20 /* SwiftyOnce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7B6E571E322622006F4A20 /* SwiftyOnce.framework */; };
-		9A7B6E661E322622006F4A20 /* SwiftyOnceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7B6E651E322622006F4A20 /* SwiftyOnceTests.swift */; };
+		9A7B6E661E322622006F4A20 /* OnceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7B6E651E322622006F4A20 /* OnceTests.swift */; };
 		9A7B6E681E322622006F4A20 /* SwiftyOnce.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A7B6E5A1E322622006F4A20 /* SwiftyOnce.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9AE4CDC91E35FC50009B0A42 /* SwiftyOnce.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9AE4CDC81E35FC50009B0A42 /* SwiftyOnce.podspec */; };
-		9AE4CDCB1E35FF8C009B0A42 /* DispatchQueue+Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4CDCA1E35FF8C009B0A42 /* DispatchQueue+Once.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,15 +24,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A5E1D3E1E363F4A00EFF992 /* Once.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Once.swift; sourceTree = "<group>"; };
 		9A7B6E571E322622006F4A20 /* SwiftyOnce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyOnce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7B6E5A1E322622006F4A20 /* SwiftyOnce.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyOnce.h; sourceTree = "<group>"; };
 		9A7B6E5B1E322622006F4A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A7B6E601E322622006F4A20 /* SwiftyOnceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyOnceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A7B6E651E322622006F4A20 /* SwiftyOnceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyOnceTests.swift; sourceTree = "<group>"; };
+		9A7B6E651E322622006F4A20 /* OnceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnceTests.swift; sourceTree = "<group>"; };
 		9A7B6E671E322622006F4A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A7B6E711E322655006F4A20 /* SwiftyOnce.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftyOnce.playground; sourceTree = "<group>"; };
-		9AE4CDC81E35FC50009B0A42 /* SwiftyOnce.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftyOnce.podspec; sourceTree = "<group>"; };
-		9AE4CDCA1E35FF8C009B0A42 /* DispatchQueue+Once.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Once.swift"; path = "Sources/DispatchQueue+Once.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +56,7 @@
 		9A7B6E4D1E322622006F4A20 = {
 			isa = PBXGroup;
 			children = (
-				9AE4CDC81E35FC50009B0A42 /* SwiftyOnce.podspec */,
 				9A7B6E711E322655006F4A20 /* SwiftyOnce.playground */,
-				9AE4CDCC1E35FF91009B0A42 /* Sources */,
 				9A7B6E591E322622006F4A20 /* SwiftyOnce */,
 				9A7B6E641E322622006F4A20 /* SwiftyOnceTests */,
 				9A7B6E581E322622006F4A20 /* Products */,
@@ -79,6 +75,7 @@
 		9A7B6E591E322622006F4A20 /* SwiftyOnce */ = {
 			isa = PBXGroup;
 			children = (
+				9A5E1D3E1E363F4A00EFF992 /* Once.swift */,
 				9A7B6E5B1E322622006F4A20 /* Info.plist */,
 				9A7B6E5A1E322622006F4A20 /* SwiftyOnce.h */,
 			);
@@ -88,18 +85,10 @@
 		9A7B6E641E322622006F4A20 /* SwiftyOnceTests */ = {
 			isa = PBXGroup;
 			children = (
-				9A7B6E651E322622006F4A20 /* SwiftyOnceTests.swift */,
+				9A7B6E651E322622006F4A20 /* OnceTests.swift */,
 				9A7B6E671E322622006F4A20 /* Info.plist */,
 			);
 			path = SwiftyOnceTests;
-			sourceTree = "<group>";
-		};
-		9AE4CDCC1E35FF91009B0A42 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				9AE4CDCA1E35FF8C009B0A42 /* DispatchQueue+Once.swift */,
-			);
-			name = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,12 +148,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = ktustanowski;
 				TargetAttributes = {
 					9A7B6E561E322622006F4A20 = {
 						CreatedOnToolsVersion = 8.1;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					9A7B6E5F1E322622006F4A20 = {
@@ -196,7 +185,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE4CDC91E35FC50009B0A42 /* SwiftyOnce.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE4CDCB1E35FF8C009B0A42 /* DispatchQueue+Once.swift in Sources */,
+				9A5E1D3F1E363F4A00EFF992 /* Once.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A7B6E661E322622006F4A20 /* SwiftyOnceTests.swift in Sources */,
+				9A7B6E661E322622006F4A20 /* OnceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +243,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -308,6 +297,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

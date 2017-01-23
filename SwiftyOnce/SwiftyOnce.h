@@ -15,5 +15,3 @@ FOUNDATION_EXPORT double SwiftyOnceVersionNumber;
 FOUNDATION_EXPORT const unsigned char SwiftyOnceVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <SwiftyOnce/PublicHeader.h>
-
-

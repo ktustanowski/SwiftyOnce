@@ -28,30 +28,32 @@
 
 import Foundation
 
-public extension DispatchQueue {
+public struct Once {
+    
+    fileprivate static let internalQueue: DispatchQueue = DispatchQueue(label:"LockingQueue")
     fileprivate static var tokens = [String]()
     
-    public class func once(token: String, block:(Void)->Void) {
-        objc_sync_enter(self)
-        defer { objc_sync_exit(self) }
-        guard !tokens.contains(token) else { return }
-        
-        tokens.append(token)
-        block()
+    public static func dispatch(withToken token: String, block: (Void) -> Void) {
+        internalQueue.sync {
+            guard !tokens.contains(token) else { return }
+            
+            tokens.append(token)
+            block()
+        }
     }
 }
 
-extension DispatchQueue {
+extension Once {
     
     /// Only for unit testing purposes. Removes once token. This allows another execution of closure assiciated with this token.
     ///
     /// - Warning: This behavior is allowed only for schemes which have set IN_TESTS environmental variable.
-    static func remove(onceToken: String) {
+    static func remove(token: String) {
         guard ProcessInfo.processInfo.environment["IN_TESTS"] != nil else {
             assertionFailure("Can't remove once tokens while not in tests!")
             return
         }
-        guard let index = tokens.index(of: onceToken) else { return }
+        guard let index = tokens.index(of: token) else { return }
         
         tokens.remove(at: index)
     }

@@ -9,14 +9,16 @@ let concurrentQueue = DispatchQueue(label: "concurrent.queue", qos: .utility, at
 for _ in 0...100 {
     
     DispatchQueue.global().async {
-        DispatchQueue.once(token: "someToken") {
+        Once.dispatch(withToken:"someToken") {
             print("You should see this only once")
         }
     }
 
     concurrentQueue.async {
-        DispatchQueue.once(token: "someToken") {
-            print("You should see this only once")
+        for _ in 0...100 {
+            Once.dispatch(withToken:"someToken") {
+                print("You should see this only once")
+            }
         }
     }
 

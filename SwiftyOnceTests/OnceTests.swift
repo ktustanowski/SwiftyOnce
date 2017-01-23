@@ -27,14 +27,16 @@ class SwiftyOnceTests: XCTestCase {
         
         for _ in 0...100 {
             DispatchQueue.global().async {
-                DispatchQueue.once(token: "someToken") {
+                Once.dispatch(withToken: "someToken") {
                     counter += 1
                 }
             }
 
             concurrentQueue.async {
-                DispatchQueue.once(token: "someToken") {
-                    counter += 1
+                for _ in 0...100 {
+                    Once.dispatch(withToken: "someToken") {
+                        counter += 1
+                    }
                 }
             }
         }
