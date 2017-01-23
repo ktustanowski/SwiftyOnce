@@ -11,25 +11,47 @@ import XCTest
 
 class SwiftyOnceTests: XCTestCase {
     
+    var concurrentQueue: DispatchQueue!
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        concurrentQueue = DispatchQueue(label: "concurrent.queue", qos: .utility, attributes: .concurrent)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testThatBlockIsExecutedOnlyOnce() {
+        let dispatchOnceExpectation = expectation(description: "Dispatch once")
+        var counter = 0
+        
+        /* Fulfill expectation before waitForExpectations timeouts */
+        fulfill(dispatchOnceExpectation, deadline: .now() + 2)
+        
+        for _ in 0...100 {
+            DispatchQueue.global().async {
+                DispatchQueue.once(token: "someToken") {
+                    counter += 1
+                }
+            }
+
+            concurrentQueue.async {
+                DispatchQueue.once(token: "someToken") {
+                    counter += 1
+                }
+            }
+        }
+        
+        waitForExpectations(timeout: 2.5, handler: nil)
+        
+        XCTAssertEqual(counter, 1, "")
     }
+}
+
+extension SwiftyOnceTests {
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func fulfill(_ expectation: XCTestExpectation, deadline: DispatchTime) {
+        DispatchQueue.global().asyncAfter(deadline: deadline) {
+            DispatchQueue.main.async {
+                expectation.fulfill()
+            }
         }
     }
     

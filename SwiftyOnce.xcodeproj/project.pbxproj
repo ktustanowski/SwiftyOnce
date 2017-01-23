@@ -10,6 +10,7 @@
 		9A7B6E611E322622006F4A20 /* SwiftyOnce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7B6E571E322622006F4A20 /* SwiftyOnce.framework */; };
 		9A7B6E661E322622006F4A20 /* SwiftyOnceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7B6E651E322622006F4A20 /* SwiftyOnceTests.swift */; };
 		9A7B6E681E322622006F4A20 /* SwiftyOnce.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A7B6E5A1E322622006F4A20 /* SwiftyOnce.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A7B6E731E3226C7006F4A20 /* DispatchQueue+Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7B6E721E3226C7006F4A20 /* DispatchQueue+Once.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,8 @@
 		9A7B6E601E322622006F4A20 /* SwiftyOnceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyOnceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7B6E651E322622006F4A20 /* SwiftyOnceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyOnceTests.swift; sourceTree = "<group>"; };
 		9A7B6E671E322622006F4A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A7B6E711E322655006F4A20 /* SwiftyOnce.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftyOnce.playground; sourceTree = "<group>"; };
+		9A7B6E721E3226C7006F4A20 /* DispatchQueue+Once.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Once.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,7 @@
 		9A7B6E4D1E322622006F4A20 = {
 			isa = PBXGroup;
 			children = (
+				9A7B6E711E322655006F4A20 /* SwiftyOnce.playground */,
 				9A7B6E591E322622006F4A20 /* SwiftyOnce */,
 				9A7B6E641E322622006F4A20 /* SwiftyOnceTests */,
 				9A7B6E581E322622006F4A20 /* Products */,
@@ -71,8 +75,9 @@
 		9A7B6E591E322622006F4A20 /* SwiftyOnce */ = {
 			isa = PBXGroup;
 			children = (
-				9A7B6E5A1E322622006F4A20 /* SwiftyOnce.h */,
+				9A7B6E721E3226C7006F4A20 /* DispatchQueue+Once.swift */,
 				9A7B6E5B1E322622006F4A20 /* Info.plist */,
+				9A7B6E5A1E322622006F4A20 /* SwiftyOnce.h */,
 			);
 			path = SwiftyOnce;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 				TargetAttributes = {
 					9A7B6E561E322622006F4A20 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					9A7B6E5F1E322622006F4A20 = {
@@ -196,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A7B6E731E3226C7006F4A20 /* DispatchQueue+Once.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +327,7 @@
 		9A7B6E6C1E322622006F4A20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -331,6 +339,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ktustanowski.SwiftyOnce;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -338,6 +347,7 @@
 		9A7B6E6D1E322622006F4A20 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +366,7 @@
 		9A7B6E6F1E322622006F4A20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = SwiftyOnceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ktustanowski.SwiftyOnceTests;
@@ -367,6 +378,7 @@
 		9A7B6E701E322622006F4A20 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = SwiftyOnceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ktustanowski.SwiftyOnceTests;
