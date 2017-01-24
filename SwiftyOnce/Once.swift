@@ -41,9 +41,6 @@ public struct Once {
             block()
         }
     }
-}
-
-public extension Once {
     
     /// Only for unit testing purposes. Removes once token. This allows another execution of closure assiciated with this token.
     ///
@@ -57,4 +54,5 @@ public extension Once {
         
         tokens.remove(at: index)
     }
+
 }
