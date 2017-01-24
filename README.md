@@ -1,6 +1,19 @@
 # SwiftyOnce
 Unit test friendly dispatch_once replacement for Swift3.
 
+##Usage
+
+```swift
+Once.dispatch(withToken: "someAppUniqueToken") {
+  /* this will be dispatched only once */
+}
+```
+
+##Unit tests
+First you have to update your unit tests scheme (*Edit scheme*) and and in *Test* section in *Environment Variables* add **IN_TESTS** set to YES. Without this assertion will be called when you try to remove the token. This is to ensure no one do this unintentionally on production code:
+```swift
+Once.remove(token: "someAppUniqueToken")
+```
 ## Carthage
 ```
 github "ktustanowski/SwiftyOnce" == 0.1.0
