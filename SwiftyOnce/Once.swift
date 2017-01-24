@@ -43,12 +43,12 @@ public struct Once {
     }
 }
 
-extension Once {
+public extension Once {
     
     /// Only for unit testing purposes. Removes once token. This allows another execution of closure assiciated with this token.
     ///
     /// - Warning: This behavior is allowed only for schemes which have set IN_TESTS environmental variable.
-    static func remove(token: String) {
+    public static func remove(token: String) {
         guard ProcessInfo.processInfo.environment["IN_TESTS"] != nil else {
             assertionFailure("Can't remove once tokens while not in tests!")
             return
