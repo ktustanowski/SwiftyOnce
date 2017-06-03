@@ -1,4 +1,5 @@
 language: objective-c
+osx_image: xcode8.3
 script:
 - xcodebuild -project SwiftyOnce.xcodeproj -scheme SwiftyOnce -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.3' test
 
