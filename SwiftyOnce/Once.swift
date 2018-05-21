@@ -33,7 +33,7 @@ public struct Once {
     fileprivate static let internalQueue: DispatchQueue = DispatchQueue(label:"LockingQueue")
     fileprivate static var tokens = [String]()
     
-    public static func dispatch(withToken token: String, block: (Void) -> Void) {
+    public static func dispatch(withToken token: String, block: () -> Void) {
         internalQueue.sync {
             guard !tokens.contains(token) else { return }
             
@@ -41,8 +41,12 @@ public struct Once {
             block()
         }
     }
-    
-    /// Only for unit testing purposes. Removes once token. This allows another execution of closure assiciated with this token.
+}
+
+
+// MARK: Unit testing purpose only
+public extension Once {
+    /// Removes once token. This allows another execution of closure assiciated with this token.
     ///
     /// - Warning: This behavior is allowed only for schemes which have set IN_TESTS environmental variable.
     public static func remove(token: String) {
@@ -54,5 +58,4 @@ public struct Once {
         
         tokens.remove(at: index)
     }
-
 }

@@ -31,7 +31,7 @@
 		9A7B6E601E322622006F4A20 /* SwiftyOnceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyOnceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7B6E651E322622006F4A20 /* OnceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnceTests.swift; sourceTree = "<group>"; };
 		9A7B6E671E322622006F4A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A7B6E711E322655006F4A20 /* SwiftyOnce.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftyOnce.playground; sourceTree = "<group>"; };
+		9A7B6E711E322655006F4A20 /* SwiftyOnce.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftyOnce.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,7 +343,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -363,7 +363,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ktustanowski.SwiftyOnce;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
