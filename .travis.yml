@@ -1,3 +1,5 @@
 language: objective-c
+osx_image: xcode8.3
 script:
-- xctool test -workspace SwiftyOnce.xcworkspace -scheme SwiftyOnceTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+- xcodebuild -project SwiftyOnce.xcodeproj -scheme SwiftyOnce -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.3' test
+
