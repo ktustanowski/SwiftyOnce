@@ -19,7 +19,7 @@ Once.remove(token: "someAppUniqueToken")
 ```
 ## Carthage
 ```
-github "ktustanowski/SwiftyOnce" == 0.1.0
+github "ktustanowski/SwiftyOnce"
 ```
 ## Final notes
 I tried DispatchQueue extension at first but I had serious issues in unit tests which seems to be or was a known bug - this radar says its fixed -> https://openradar.appspot.com/radar?id=4624971611504640 but my experience says its not the whole truth. It wasn't working for me for iOS < 10
