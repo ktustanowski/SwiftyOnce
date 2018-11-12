@@ -11,6 +11,8 @@
 		9A7B6E611E322622006F4A20 /* SwiftyOnce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7B6E571E322622006F4A20 /* SwiftyOnce.framework */; };
 		9A7B6E661E322622006F4A20 /* OnceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7B6E651E322622006F4A20 /* OnceTests.swift */; };
 		9A7B6E681E322622006F4A20 /* SwiftyOnce.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A7B6E5A1E322622006F4A20 /* SwiftyOnce.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B666686821878E4500985C0B /* SwiftyOnceTV.h in Headers */ = {isa = PBXBuildFile; fileRef = B666686621878E4500985C0B /* SwiftyOnceTV.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B666686C21878E6800985C0B /* Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5E1D3E1E363F4A00EFF992 /* Once.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,11 @@
 		9A7B6E651E322622006F4A20 /* OnceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnceTests.swift; sourceTree = "<group>"; };
 		9A7B6E671E322622006F4A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A7B6E711E322655006F4A20 /* SwiftyOnce.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftyOnce.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B666685921878DF200985C0B /* SwiftyOnceTV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyOnceTV.h; sourceTree = "<group>"; };
+		B666685A21878DF200985C0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B666686421878E4500985C0B /* SwiftyOnce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyOnce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B666686621878E4500985C0B /* SwiftyOnceTV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyOnceTV.h; sourceTree = "<group>"; };
+		B666686721878E4500985C0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +57,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B666686021878E4500985C0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -59,6 +73,8 @@
 				9A7B6E711E322655006F4A20 /* SwiftyOnce.playground */,
 				9A7B6E591E322622006F4A20 /* SwiftyOnce */,
 				9A7B6E641E322622006F4A20 /* SwiftyOnceTests */,
+				B666685821878DF200985C0B /* SwiftyOnceTV */,
+				B666686521878E4500985C0B /* SwiftyOnceTV */,
 				9A7B6E581E322622006F4A20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +84,7 @@
 			children = (
 				9A7B6E571E322622006F4A20 /* SwiftyOnce.framework */,
 				9A7B6E601E322622006F4A20 /* SwiftyOnceTests.xctest */,
+				B666686421878E4500985C0B /* SwiftyOnce.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +108,24 @@
 			path = SwiftyOnceTests;
 			sourceTree = "<group>";
 		};
+		B666685821878DF200985C0B /* SwiftyOnceTV */ = {
+			isa = PBXGroup;
+			children = (
+				B666685921878DF200985C0B /* SwiftyOnceTV.h */,
+				B666685A21878DF200985C0B /* Info.plist */,
+			);
+			path = SwiftyOnceTV;
+			sourceTree = "<group>";
+		};
+		B666686521878E4500985C0B /* SwiftyOnceTV */ = {
+			isa = PBXGroup;
+			children = (
+				B666686621878E4500985C0B /* SwiftyOnceTV.h */,
+				B666686721878E4500985C0B /* Info.plist */,
+			);
+			path = SwiftyOnceTV;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -99,6 +134,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A7B6E681E322622006F4A20 /* SwiftyOnce.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B666686121878E4500985C0B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B666686821878E4500985C0B /* SwiftyOnceTV.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +184,24 @@
 			productReference = 9A7B6E601E322622006F4A20 /* SwiftyOnceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		B666686321878E4500985C0B /* SwiftyOnceTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B666686921878E4500985C0B /* Build configuration list for PBXNativeTarget "SwiftyOnceTV" */;
+			buildPhases = (
+				B666685F21878E4500985C0B /* Sources */,
+				B666686021878E4500985C0B /* Frameworks */,
+				B666686121878E4500985C0B /* Headers */,
+				B666686221878E4500985C0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyOnceTV;
+			productName = SwiftyOnceTV;
+			productReference = B666686421878E4500985C0B /* SwiftyOnce.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -161,6 +222,10 @@
 						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
+					B666686321878E4500985C0B = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 9A7B6E511E322622006F4A20 /* Build configuration list for PBXProject "SwiftyOnce" */;
@@ -176,6 +241,7 @@
 			projectRoot = "";
 			targets = (
 				9A7B6E561E322622006F4A20 /* SwiftyOnce */,
+				B666686321878E4500985C0B /* SwiftyOnceTV */,
 				9A7B6E5F1E322622006F4A20 /* SwiftyOnceTests */,
 			);
 		};
@@ -190,6 +256,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9A7B6E5E1E322622006F4A20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B666686221878E4500985C0B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -212,6 +285,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A7B6E661E322622006F4A20 /* OnceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B666685F21878E4500985C0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B666686C21878E6800985C0B /* Once.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +491,60 @@
 			};
 			name = Release;
 		};
+		B666686A21878E4500985C0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SwiftyOnceTV/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ktustanowski.SwiftyOnceTV.SwiftyOnceTV;
+				PRODUCT_NAME = SwiftyOnce;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		B666686B21878E4500985C0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SwiftyOnceTV/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ktustanowski.SwiftyOnceTV.SwiftyOnceTV;
+				PRODUCT_NAME = SwiftyOnce;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -436,6 +571,15 @@
 			buildConfigurations = (
 				9A7B6E6F1E322622006F4A20 /* Debug */,
 				9A7B6E701E322622006F4A20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B666686921878E4500985C0B /* Build configuration list for PBXNativeTarget "SwiftyOnceTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B666686A21878E4500985C0B /* Debug */,
+				B666686B21878E4500985C0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
